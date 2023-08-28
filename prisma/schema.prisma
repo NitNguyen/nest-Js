@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model tasks {
+  id         Int     @id @default(autoincrement())
+  title      String  @db.VarChar(255)
+  is_deleted Boolean @default(true)
+}
