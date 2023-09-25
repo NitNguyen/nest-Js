@@ -1,6 +1,6 @@
 import { Logger, Module } from '@nestjs/common';
 import { PrismaModule, loggingMiddleware } from 'nestjs-prisma';
-import { TasksModule } from './modules/tasks.module';
+import { TasksModule } from './modules/Tasks.module';
 
 @Module({
   imports: [
